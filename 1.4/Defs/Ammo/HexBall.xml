@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>AmmoHexBall</defName>
+		<label>Hexagonal Minie ball</label>
+		<parent>AmmoRifles</parent>
+    <iconPath>UI/Icons/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+	<!-- High Velocity -->
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_FastHexBall</defName>
+		<label>Hexagonal Minie Ball</label>
+		<ammoTypes>
+			<Ammo_HexBall>Bullet_FastHexBall</Ammo_HexBall>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="HexBallBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a hexagonal, pointed projectile and black powder, fired by a specialized, rifled firearm. Incompatible with most firearms due to it's specialized design.</description>
+		<statBases>
+		<Mass>0.087</Mass>
+		<Bulk>0.12</Bulk>
+		</statBases>
+		<tradeTags>
+		  <li>CE_PreIndustrialAmmo</li>
+		  <li>CE_AutoEnableTrade</li>
+		  <li>CE_AutoEnableCrafting_FueledSmithy</li>
+		  <li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoHexBall</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HexBallBase">
+		<defName>Ammo_HexBall</defName>
+		<label>Hexagonal Minie Ball</label>
+		<graphicData>
+			<texPath>Things/Ammo/Hex</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.2</MarketValue>
+		</statBases>
+		<ammoClass>MusketBall</ammoClass>
+	</ThingDef>
+	
+	<!-- ================== Projectile Base ================== -->
+	
+	<ThingDef Name="HexBallBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="HexBallBullet">
+		<defName>Bullet_FastHexBall</defName>
+		<label>Hexagonal Minie Ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>120</speed>	
+			<damageAmountBase>28</damageAmountBase>		
+			<armorPenetrationSharp>5</armorPenetrationSharp>
+			<armorPenetrationBlunt>104.8</armorPenetrationBlunt>				
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_HexBall</defName>
+		<label>Make Hexagonal Minie Ball x100</label>
+		<description>Craft 100 minie balls, for use with the Whitworth Marksman Rifle.</description>
+		<jobString>Making minie balls.</jobString>
+		<researchPrerequisite>TGP_Percussion</researchPrerequisite>
+    	<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HexBall>100</Ammo_HexBall>
+		</products>
+	</RecipeDef>
+	
+</Defs>

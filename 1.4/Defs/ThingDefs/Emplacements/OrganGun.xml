@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- ==================== Six Barrel Organ Gun ==================== -->
+
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>Turret_Organgun</defName>
+    <label>Six Barrel Organ Gun</label>
+    <graphicData>
+      <texPath>Building/Emplacements/Organgun_Gun_Large</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A blackpowder siege weapon designed to for use against infantry formations, trading the power of a traditional cannon for the ability to fire multiple shots in rapid succession. This organ gun is built in a six barrel configuration, allowing a rapid volley of six shots in the same time it would take a cannon to fire one, albeit at the cost of lower power per projectile. Deadly against infantry at close range, but sporting a long reload time due to needing to load multiple barrels.</description>
+    <statBases>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.15</ShotSpread>
+      <SwayFactor>0.85</SwayFactor>
+      <RangedWeapon_Cooldown>0.05</RangedWeapon_Cooldown>
+      <Mass>100</Mass>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>5.34</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MiniCannonBall_Round</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>65</range>
+	<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <minRange>4</minRange>
+        <soundCast>Shot_Organgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>6</magazineSize>
+        <reloadTime>12</reloadTime>
+        <ammoSet>AmmoSet_CannonBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>6</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TurretMannedBuildableBase">
+    <defName>Turret_Organgunbase</defName>
+    <label>Six Barrel Organ Gun</label>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+    <graphicData>
+      <texPath>Building/Emplacements/Organgun_Base</texPath>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconPath>Building/Emplacements/Organgun_Icon</uiIconPath>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>160</Mass>
+      <Bulk>100</Bulk>
+    </statBases>
+    <description>A blackpowder field cannon, light enough to use in regular combat while heavy enough to pack a punch against dense formations.</description>
+    <costList>
+      <Steel>140</Steel>
+      <WoodLog>90</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>Turret_Organgun</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<size>(2,2)</size>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <researchPrerequisites>
+      <li>CE_Gunpowder</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>
