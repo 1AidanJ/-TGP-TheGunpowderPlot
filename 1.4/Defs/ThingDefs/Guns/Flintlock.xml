@@ -351,7 +351,7 @@
   <ThingDef ParentName="BaseMakeableGun">
     <defName>TGP_FlintlockRifle</defName>
     <label>Flintlock Baker Rifle</label>
-    <description>An ancient pattern flintlock rifle. Popular with early marksman units, these firearms feature grooved barrels which impart spin upon the bullet as it travels, stabilizing it in flight and allowing much greater accuracy at a distance than smoothbore firearms (at a cost of being more difficult to reload). \n\n"Here's forty shillings on the drum \nFor those who volunteer to come,\nTo 'list and fight the foe today\nOver the Hills and far away..."</description>
+    <description>An ancient pattern flintlock rifle. Popular with early elite marksman units, these firearms feature grooved barrels which impart spin upon the bullet as it travels, stabilizing it in flight and allowing much greater accuracy at a distance than smoothbore firearms (at a cost of being more difficult to reload). \n\n"Here's forty shillings on the drum \nFor those who volunteer to come,\nTo 'list and fight the foe today\nOver the Hills and far away..."</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
       <texPath>Things/Weapons/Flintlock_Baker</texPath>
