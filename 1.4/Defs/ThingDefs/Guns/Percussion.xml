@@ -330,7 +330,7 @@
     <description>An ancient revolving pistol in a cap-and-ball percussion design. Designed for use with mounted cavalry, this revolver features a six shot capacity of .44 caliber bullets. Many revolvers of a similar design would later see conversion into cartridge-based weapons, shedding their percussion caps for a more modern striker fired ignition system. Texas Red won't know what hit 'em.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/Percussion_Walker</texPath>
+      <texPath>Things/Weapons/Percussion_Walker_Redo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>
@@ -430,7 +430,7 @@
     <description>An ancient revolving pistol in a cap-and-ball percussion design. This revolver's innovative construction features a removeable cylinder, allowing much quicker reloads than its cap-and-ball contemporaries with fixed cylinders. Many revolvers of a similar design would later see conversion into cartridge-based weapons, shedding their percussion caps for a more modern striker fired ignition system.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/Percussion_NewModelArmy</texPath>
+      <texPath>Things/Weapons/Percussion_NewModelArmy_Redo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>
