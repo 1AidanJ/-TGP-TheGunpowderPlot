@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>Ammo_CongreveRocket</defName>
+    <label>Congreve Rocket</label>
+    <parent>AmmoShells</parent>
+    <iconPath>UI/Icons/Rocket_a</iconPath>
+  </ThingCategoryDef>
+
+  <!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_CongreveRocket</defName>
+    <label>Congreve Rockets</label>
+    <ammoTypes>
+      <Shell_Rocket_HE>Bullet_Rocket_HE</Shell_Rocket_HE>
+      <Shell_Rocket_Incendiary>Bullet_Rocket_Incendiary</Shell_Rocket_Incendiary>     
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="RocketBase" ParentName="HeavyAmmoBase" Abstract="True">
+    <description>An iron, blackpowder filled rocket designed to be fired from a angled rail system.</description>
+    <graphicData>
+      <drawSize>1.00</drawSize>
+    </graphicData>    
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.27</Mass>
+      <Bulk>2.21</Bulk>	  
+    </statBases>
+    <thingCategories>
+      <li>Ammo_CongreveRocket</li>
+    </thingCategories>
+<techLevel>Medieval</techLevel>
+    <stackLimit>50</stackLimit>
+    <tradeTags>
+      <li>CE_PreIndustrialAmmo</li>
+	<li>CE_AutoEnableCrafting_FueledSmithy</li>
+	<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+    </tradeTags>
+    <cookOffFlashScale>20</cookOffFlashScale>
+    <cookOffSound>MortarBomb_Explode</cookOffSound>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="RocketBase">
+    <defName>Shell_Rocket_HE</defName>
+    <label>Congreve Rocket (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/ConRockets</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.2</MarketValue>
+    </statBases>
+    <ammoClass>GrenadeHE</ammoClass>
+    <detonateProjectile>Bullet_Rocket_HE</detonateProjectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="RocketBase">
+    <defName>Shell_Rocket_Incendiary</defName>
+    <label>Congreve Rocket (Incendiary)</label>
+    <graphicData>
+      <texPath>Things/Ammo/ConRockets</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>14.47</MarketValue>
+    </statBases>
+    <ammoClass>GrenadeIncendiary</ammoClass>
+    <detonateProjectile>Bullet_Rocket_Incendiary</detonateProjectile>
+  </ThingDef>
+
+
+
+  <!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseRocket" ParentName="BaseExplosiveBullet" Abstract="true">
+    <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <speed>0</speed>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <flyOverhead>true</flyOverhead>
+      <dropsCasings>false</dropsCasings>
+      <gravityFactor>5</gravityFactor>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseRocket">
+    <defName>Bullet_Rocket_HE</defName>
+    <label>Congreve Rocket (HE)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Mortar/HE</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bomb</damageDef>
+      <explosionRadius>3</explosionRadius>	  
+      <damageAmountBase>35</damageAmountBase>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+    <comps>
+      <li Class="CombatExtended.CompProperties_Fragments">
+        <fragments>
+          <Fragment_Large>0</Fragment_Large>
+          <Fragment_Small>18</Fragment_Small>
+        </fragments>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="Base60mmMortarShell">
+    <defName>Bullet_Rocket_Incendiary</defName>
+    <label>Congreve Rocket (Incendiary)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Mortar/Incendiary</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>PrometheumFlame</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionRadius>3.5</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.15</preExplosionSpawnChance>
+      <soundExplode>MortarIncendiary_Explode</soundExplode>
+    </projectile>
+  </ThingDef>
+
+
+  <!-- ==================== Recipes ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeShell_Rocket_HE</defName>
+    <label>Make Congreve Rocket (HE) x5</label>
+    <description>Craft 5 HE Rockets.</description>
+    <jobString>Making HE Rockets.</jobString>
+	<researchPrerequisite>TGP_Flintlock</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+	<li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+	<li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Shell_Rocket_HE>5</Shell_Rocket_HE>
+    </products>
+    <workAmount>2000</workAmount>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeShell_Rocket_Incendiary</defName>
+    <label>Make Congreve Rocket (Incendiary) x5</label>
+    <description>Craft 5 incendiary rockets.</description>
+    <jobString>Making incendiary rockets.</jobString>
+	<researchPrerequisite>TGP_Flintlock</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+	<li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Prometheum</li>
+	<li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Shell_Rocket_Incendiary>5</Shell_Rocket_Incendiary>
+    </products>
+    <workAmount>2000</workAmount>
+  </RecipeDef>
+
+
+
+</Defs>

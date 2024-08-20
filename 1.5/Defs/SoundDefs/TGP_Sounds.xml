@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+<SoundDef>
+    <defName>Shot_Wallgun</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>WallGun</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>90</min>
+          <max>120</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.985690</min>
+          <max>1.255345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Baker</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Baker</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>120</min>
+          <max>140</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.895690</min>
+          <max>1.105345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Bess</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Bess</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>55</min>
+          <max>60</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.885690</min>
+          <max>0.955345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_BanZutsu</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ban-Zutsu</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>85</min>
+          <max>110</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.955690</min>
+          <max>0.125345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Coach</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Coach</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>90</min>
+          <max>110</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.825690</min>
+          <max>0.955345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Rocket</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>RocketFire</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>110</min>
+          <max>140</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.955690</min>
+          <max>1.205345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Cannon</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Cannon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>110</min>
+          <max>140</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.955690</min>
+          <max>1.205345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+<SoundDef>
+    <defName>Shot_Organgun</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>6</maxVoices>
+    <maxSimultaneous>6</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>OrganGun</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>90</min>
+          <max>120</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.855690</min>
+          <max>1.055345</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

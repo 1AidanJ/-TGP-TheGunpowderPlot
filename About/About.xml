@@ -3,9 +3,9 @@
     <name>[TGP] The Gunpowder Plot</name>
     <author>Un1ty</author>
     <packageId>un1ty.gunpowder</packageId>
-    <description>This mod adds early black powder firearms to Rimworld, covering periods from matchlock to wheellock, flintlock and finally percussion. Requires Combat Extended.</description>
+    <description>Adds early black powder firearms to Rimworld through the combat extended framework, covering periods from Matchlock to Percussion, and everything between.</description>
     <supportedVersions>
-        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
 	<modDependencies>
 		<li>
