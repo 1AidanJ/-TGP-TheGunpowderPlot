@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- ==================== 12 Pounder Field Cannon ==================== -->
+
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>Turret_Fieldcannon</defName>
+    <label>12-Pounder Field Cannon</label>
+    <graphicData>
+      <texPath>Building/Emplacements/Cannon_Gun_Large</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A blackpowder field cannon, light enough to use in regular combat, while heavy enough to pack a punch against dense formations.</description>
+    <statBases>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.10</ShotSpread>
+      <SwayFactor>0.85</SwayFactor>
+      <RangedWeapon_Cooldown>2.4</RangedWeapon_Cooldown>
+      <Mass>100</Mass>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>5.34</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CannonBall_Round</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>75</range>
+        <minRange>4</minRange>
+        <soundCast>Shot_Cannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>9</reloadTime>
+        <ammoSet>AmmoSet_CannonBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TurretMannedBuildableBase">
+    <defName>Turret_Fieldcannonbase</defName>
+    <label>12-Pounder Field Cannon</label>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <graphicData>
+      <texPath>Building/Emplacements/Cannon_Base</texPath>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconPath>Building/Emplacements/Cannon_Icon</uiIconPath>
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>200</Mass>
+      <Bulk>120</Bulk>
+    </statBases>
+    <description>A blackpowder field cannon, light enough to use in regular combat while heavy enough to pack a punch against dense formations.</description>
+    <costList>
+      <Steel>200</Steel>
+      <WoodLog>120</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>Turret_Fieldcannon</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<size>(2,2)</size>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <researchPrerequisites>
+      <li>TGP_Flintlock</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ResearchProjectDef>
+    <defName>TGP_Wheellock</defName>
+    <label>Wheellock Ignition</label>
+    <description>Craft muzzle loading firearms of a wheellock design. Through the use of a spring-loaded, serrated steel wheel which spins against iron pyrite, a shower of sparks is created, igninting the powder charge and firing the gun. As some of the first firearms that were capable of carrying shot ready and primed without the need for a lit match, wheellock technology was banned on some primitive worlds due to fears of its potential for use in political assasinations.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>CE_Gunpowder</li>
+    </prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>4.25</researchViewY>
+  </ResearchProjectDef>
+
+
+<ResearchProjectDef>
+    <defName>TGP_Flintlock</defName>
+    <label>Flintlock Ignition</label>
+    <description>Craft muzzle loading firearms of a flintlock design. A spring-loaded set of jaws holding a properly knapped shard of flint snaps forward and strikes against a scored iron plate, creating a sparks in a similar manner to a flint and steel firestarter. Preferred by early era soldiers over wheellock designs for mass military service due to the much simpler construction and maintenance.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>TGP_Wheellock</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.25</researchViewY>
+  </ResearchProjectDef>
+
+
+<ResearchProjectDef>
+    <defName>TGP_Percussion</defName>
+    <label>Percussion Ignition</label>
+    <description>Craft muzzle loading firearms of a percussion design, also known as cap-and-ball firearms. Percussion firearms use a shock-sensitive metal cap placed upon a cone or nipple on the barrel, which ignites the powder charge inside the barrel when impacted with enough force from the gun's hammer. While seemingly not so different in capabilites from its predecessors, percussion ignition was the first step towards the development of many cartridge based firearms which are still used on the rim today.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>TGP_Flintlock</li>
+    </prerequisites>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>4.25</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    All XMl for adding content to the game should be added in this folder or its subfolders.
+-->
+
+<Defs>
+
+
+<!-- ==================== TIER 3 ==================== -->
+
+<!-- ==================== Flintlock Pistol ==================== -->
+
+  <ThingDef ParentName="BaseMakeableGun">
+    <defName>TGP_MatchlockTanZutsu</defName>
+    <label>Matchlock Tan-Zutsu</label>
+    <description>An ancient matchlock firearm, in a pistol configuration. This specific pattern of matchlock was classified as "Tan-zutsu" (Small Cylinder), likely intended for use on horseback. Glitterworld historians question the utility of a matchlock in pistol form, given the inherent limitations of the primitive ignition system: still, the reduced size may have proved useful to those in need of relatively compact firepower.\n\nHas a reduced weight, bulk, and a slightly lower reload length compared to matchlock muskets, at the cost of reduced range and power.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/Matchlock-Tan-Zutsu-(256)</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <weaponClasses>
+      <li>RangedLight</li>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <Mass>1.25</Mass>
+      <Bulk>3.50</Bulk>
+      <ShotSpread>0.41</ShotSpread>
+      <SwayFactor>1.48</SwayFactor>
+      <SightsEfficiency>0.6</SightsEfficiency>
+      <RangedWeapon_Cooldown>0.87</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>3.59</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SlowMusketBall</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>18</range>
+        <soundCast>Shot_CE_Musket</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>Gun</li>
+      <li>SimpleGun</li>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <AmmoGenPerMagOverride>3</AmmoGenPerMagOverride>
+        <reloadTime>6.5</reloadTime>
+        <ammoSet>AmmoSet_SlowMusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>Snapshot</aiAimMode>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <researchPrerequisite>CE_Gunpowder</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.54</cooldownTime>
+        <chanceFactor>1.5</chanceFactor>
+        <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>muzzle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.54</cooldownTime>
+        <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.0,1.0</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>
