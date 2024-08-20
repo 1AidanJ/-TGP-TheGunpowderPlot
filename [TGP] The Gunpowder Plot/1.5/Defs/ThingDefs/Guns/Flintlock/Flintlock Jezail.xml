@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    All XMl for adding content to the game should be added in this folder or its subfolders.
+-->
+
+<Defs>
+
+
+<!-- ==================== TIER 3 ==================== -->
+
+<!-- ==================== Flintlock Jezail ==================== -->
+
+  <ThingDef ParentName="BaseMakeableGun">
+    <defName>TGP_FlintlockJezail</defName>
+    <label>Flintlock Jezail</label>
+    <description>An ancient, ornate flintlock, noteable for its accuracy and decoration. Popular with mountainous tribesmen of humanity's past, these firearms once garnered their wielders a reputation as hidden dealers of death. Though often built with scavenged or stolen parts, these firearms were purportedly a source of pride for tribals, often sporting significant ornamentation and personalization. The rifled barrel enables a skilled marksman to strike from outside the accurate ranges of a smoothbore musket, whittling down the enemy from afar before retreating into the hills. Many a soldier has met with fate in the mountainous passes of the old earth, in a distant land where empires crumbled to dust. Another grave marks the graveyard of empires: be sure that it will not be yours.\n\nHas a greater accuracy and range compared to smoothbore muskets like the Long Land, at the cost of a slower reload and requiring more time to aim.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/Flintlock-Jezail-(256)</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>LongShots</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>13000</WorkToMake>
+      <Mass>4.5</Mass>
+      <Bulk>14.0</Bulk>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.85</SwayFactor>
+      <SightsEfficiency>1.2</SightsEfficiency>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+	<equippedAngleOffset>45</equippedAngleOffset>
+    <costList>
+      <Steel>85</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>3.2</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_FastMusketBall</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>52</range>
+        <soundCast>Shot_Baker</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>Gun</li>
+      <li>SimpleGun</li>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
+        <reloadTime>9.0</reloadTime>
+        <ammoSet>AmmoSet_FastMusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <researchPrerequisite>TGP_Flintlock</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.55</cooldownTime>
+        <chanceFactor>1.5</chanceFactor>
+        <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2.02</cooldownTime>
+        <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>muzzle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.55</cooldownTime>
+        <armorPenetrationSharp>1.3</armorPenetrationSharp>
+        <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.25,1.4</DrawSize>
+        <DrawOffset>0.15,0.0</DrawOffset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>

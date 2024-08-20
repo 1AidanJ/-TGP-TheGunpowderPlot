@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>[TGP] The Gunpowder Plot</name>
+    <author>Un1ty</author>
+    <packageId>un1ty.gunpowder</packageId>
+    <description>Adds early black powder firearms to Rimworld through the combat extended framework, covering periods from Matchlock to Percussion, and everything between.</description>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>CETeam.CombatExtended</packageId>
+			<displayName>Combat Extended</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044</steamWorkshopUrl>
+			<downloadUrl>https://github.com/CombatExtended-Continued/CombatExtended/releases/</downloadUrl>
+		</li>
+    </modDependencies>
+    <loadAfter>
+        <li>CETeam.CombatExtended</li>
+    </loadAfter>
+</ModMetaData>
+<!--
+When adding a preview photo
+
+Must be called Preview.png
+
+Should be
+640x360
+
+Must Not Be Larger then 1MB in size
+ -->
