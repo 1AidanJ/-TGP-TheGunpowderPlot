@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    All XMl for adding content to the game should be added in this folder or its subfolders.
+-->
+
+<Defs>
+
+
+<!-- ==================== TIER 3 ==================== -->
+
+<!-- ==================== Flintlock Baker Rifle ==================== -->
+
+  <ThingDef ParentName="BaseMakeableGun">
+    <defName>TGP_FlintlockRifle</defName>
+    <label>Flintlock Baker Rifle</label>
+    <description>An ancient pattern flintlock, noteable for its rifling. Popular with early elite marksman units, these firearms feature grooved barrels which impart spin upon the bullet as it travels, stabilizing it in flight and allowing greater accuracy at a distance compared to smoothbore muskets (at a cost of being more difficult to reload). \n\n"Here's forty shillings on the drum \nFor those who volunteer to come,\nTo 'list and fight the foe today\nOver the Hills and far away..."</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/Flintlock-Baker-Rifle-(256)</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>LongShots</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>13000</WorkToMake>
+      <Mass>3.85</Mass>
+      <Bulk>10.0</Bulk>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.85</SwayFactor>
+      <SightsEfficiency>1.2</SightsEfficiency>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>70</Steel>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.83</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_FastMusketBall</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>48</range>
+        <soundCast>Shot_Baker</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>Gun</li>
+      <li>SimpleGun</li>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
+        <reloadTime>9.0</reloadTime>
+        <ammoSet>AmmoSet_FastMusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <researchPrerequisite>TGP_Flintlock</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.55</cooldownTime>
+        <chanceFactor>1.5</chanceFactor>
+        <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2.02</cooldownTime>
+        <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>muzzle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.55</cooldownTime>
+        <armorPenetrationSharp>1.3</armorPenetrationSharp>
+        <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+        <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.4,1.45</DrawSize>
+        <DrawOffset>0.0,-0.1</DrawOffset>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>
