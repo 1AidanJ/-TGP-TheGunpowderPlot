@@ -11,12 +11,12 @@
 <!-- ==================== Flintlock Pistol ==================== -->
 
   <ThingDef ParentName="BaseMakeableGun">
-    <defName>TGP_FlintlockSeaServicePistol</defName>
-    <label>Flintlock Sea Service Pistol</label>
-    <description>An ancient flintlock firearm. This particular firearm was designed in a pistol configuration, for use by marines in close-quarters combat on ancient seafaring vessels. Due to the portable form factor and reliable construction, these weapons were reportedly popular with the commissioned officer class of the time: supposedly, it would not have been uncommon for wealthier soldiers to carry multiple loaded pistols on their person, in order to take several shots in quick succession.\n\nSports lower bulk, mass, and reload time compared to full-length muskets, at the cost of reduced range and accuracy.</description>
+    <defName>TGP_WheellockPistol</defName>
+    <label>Wheellock Pistol</label>
+    <description>An ancient wheellock pistol of the simplest possible design, featuring little to no decoration. Complex but innovative for its time, this mechanism used a clockwork mechanism to spin a serrated steel wheel against a piece of iron pyrite. Noteable for being one of the first firearms capable of reliable self-ignition, this type of firearm was reportedly banned in some old-earth kingdoms, out of fear it could be easily concealed and employed for political assasinations. \n\nSports lower bulk and mass compared to full-length muskets, at the cost of reduced range and accuracy. The ignition system makes it slower to reload than flintlocks, due to the necessity of rewinding the wheel after each shot. More expensive and slower to craft than simpler mechanisms, due to the mechanical complexity.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/Flintlock-Sea-Service-Pistol-(256)</texPath>
+      <texPath>Things/Weapons/Wheellock-Pistol-(256)</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>
@@ -25,21 +25,21 @@
       <li>ShortShots</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>4500</WorkToMake>
-      <Mass>1.25</Mass>
-      <Bulk>3.50</Bulk>
+      <WorkToMake>8500</WorkToMake>
+      <Mass>1.55</Mass>
+      <Bulk>3.85</Bulk>
       <ShotSpread>0.41</ShotSpread>
       <SwayFactor>1.48</SwayFactor>
       <SightsEfficiency>0.6</SightsEfficiency>
       <RangedWeapon_Cooldown>1.06</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>25</Steel>
+      <Steel>35</Steel>
       <WoodLog>10</WoodLog>
     </costList>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
-        <recoilAmount>3.89</recoilAmount>
+        <recoilAmount>3.59</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_SlowMusketBall</defaultProjectile>
@@ -62,7 +62,7 @@
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>1</magazineSize>
         <AmmoGenPerMagOverride>3</AmmoGenPerMagOverride>
-        <reloadTime>6.5</reloadTime>
+        <reloadTime>8.5</reloadTime>
         <ammoSet>AmmoSet_SlowMusketBall</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
@@ -74,7 +74,7 @@
         <li>FueledSmithy</li>
         <li>ElectricSmithy</li>
       </recipeUsers>
-      <researchPrerequisite>TGP_Flintlock</researchPrerequisite>
+      <researchPrerequisite>TGP_Wheellock</researchPrerequisite>
     </recipeMaker>
     <tools>
       <li Class="CombatExtended.ToolCE">

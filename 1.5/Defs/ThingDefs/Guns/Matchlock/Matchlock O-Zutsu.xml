@@ -24,7 +24,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>25500</WorkToMake>
+      <WorkToMake>22500</WorkToMake>
       <SightsEfficiency>1.2</SightsEfficiency>
       <ShotSpread>0.18</ShotSpread>
       <SwayFactor>2.89</SwayFactor>
