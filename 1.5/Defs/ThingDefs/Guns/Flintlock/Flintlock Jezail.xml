@@ -24,7 +24,7 @@
       <li>LongShots</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>13000</WorkToMake>
+      <WorkToMake>14500</WorkToMake>
       <Mass>4.5</Mass>
       <Bulk>14.0</Bulk>
       <ShotSpread>0.18</ShotSpread>
@@ -64,7 +64,7 @@
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>1</magazineSize>
         <AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
-        <reloadTime>9.0</reloadTime>
+        <reloadTime>10.0</reloadTime>
         <ammoSet>AmmoSet_FastMusketBall</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">

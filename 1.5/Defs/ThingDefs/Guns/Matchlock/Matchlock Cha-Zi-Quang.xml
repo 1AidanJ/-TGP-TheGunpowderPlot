@@ -65,7 +65,7 @@
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>1</magazineSize>
         <AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
-        <reloadTime>8</reloadTime>
+        <reloadTime>8.5</reloadTime>
         <ammoSet>AmmoSet_FastMusketBall</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
