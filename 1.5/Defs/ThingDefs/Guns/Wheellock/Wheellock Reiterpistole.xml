@@ -6,17 +6,17 @@
 <Defs>
 
 
-<!-- ==================== TIER 3 ==================== -->
+<!-- ==================== TIER 2 ==================== -->
 
-<!-- ==================== Flintlock Pistol ==================== -->
+<!-- ==================== Wheellock Reiterpistole ==================== -->
 
   <ThingDef ParentName="BaseMakeableGun">
-    <defName>TGP_WheellockPistol</defName>
-    <label>Wheellock Pistol</label>
-    <description>An ancient wheellock pistol of the simplest possible design, featuring little to no decoration. Complex but innovative for its time, this design used a clockwork mechanism to spin a serrated steel wheel against a piece of iron pyrite. Noteable for being one of the first firearms capable of reliable self-ignition, this type of firearm was reportedly banned in some old-earth kingdoms, out of fear it could be easily concealed and employed for political assasinations. \n\nSports lower bulk and mass compared to full-length muskets, at the cost of reduced range and accuracy. The ignition system makes it slower to reload than flintlocks, due to the necessity of rewinding the wheel after each shot. More expensive and slower to craft than simpler mechanisms, due to the mechanical complexity.</description>
+    <defName>TGP_WheellockReiterpistole</defName>
+    <label>Wheellock Reiterpistole</label>
+    <description>An ancient wheellock pistol, potentially designed for use on horseback. Complex but innovative for its time, this design used a clockwork mechanism to spin a serrated steel wheel against a piece of iron pyrite. The rounded, ball-style pommel and angular shape allows for an easier holstered draw, increasing the ease of operation when wearing gauntlets or heavy gloves. Some glitterworld historians speculate that this type of firearm may have found use with the mythical 'Schwarze Reiter', a form of plate-armored shock cavalry employed in ancient earth conflicts. Armed with a sword and pistol, these purported 'Black Riders' would likely have employed some form of caracole tactics, riding up to the enemy lines and discharging their pistols before rotating out to reload. When employed in a cohesive unit, pistol cavalry could whittle down the enemy through a constant rain of fire, unsheathing their swords to charge through gaps in a weakened formation.\n\nSports lower bulk and mass compared to full-length muskets, at the cost of reduced range and accuracy. The ignition system makes it slower to reload than flintlocks, due to needing to rewind the wheel after each shot. More expensive and slower to craft than simpler mechanisms, due to the mechanical complexity.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/Wheellock-Pistol-(256)</texPath>
+      <texPath>Things/Weapons/Wheellock-Reiterpistole-(256)</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>
