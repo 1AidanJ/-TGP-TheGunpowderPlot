@@ -6,9 +6,9 @@
 <Defs>
 
 
-<!-- ==================== Tier 4 ==================== -->
+<!-- ==================== Tier 1 ==================== -->
 
-<!-- ==================== Percussion Wall Gun ==================== -->
+<!-- ==================== Matchlock O-Zutsu ==================== -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>TGP_MatchlockOZutsu</defName>
@@ -45,7 +45,7 @@
         <defaultProjectile>Bullet_FastHighCalBall</defaultProjectile>
         <warmupTime>2.4</warmupTime>
         <range>30</range>
-        <soundCast>Shot_Wallgun</soundCast>
+        <soundCast>Shot_BanZutsu</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>16</muzzleFlashScale>
       </li>
@@ -104,7 +104,7 @@
     </weaponTags>
     <modExtensions>
       <li Class="CombatExtended.GunDrawExtension">
-        <DrawSize>1.25,1.5</DrawSize>
+        <DrawSize>1.0,1.35</DrawSize>
         <DrawOffset>0.10,0.0</DrawOffset>
       </li>
     </modExtensions>

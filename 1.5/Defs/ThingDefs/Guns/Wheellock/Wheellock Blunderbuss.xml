@@ -6,45 +6,46 @@
 <Defs>
 
 
-<!-- ==================== Tier 1 ==================== -->
+<!-- ==================== TIER 2 ==================== -->
 
-<!-- ==================== Matchlock Ban-Zutsu ==================== -->
+<!-- ==================== Wheellock Blunderbuss ==================== -->
 
   <ThingDef ParentName="BaseMakeableGun">
-    <defName>TGP_MatchlockBanZutsu</defName>
-    <label>Matchlock Ban-Zutsu</label>
-    <description>An ancient matchlock musket design, sporting a pistol grip stock with a shallow curve. This specific pattern of musket was classified as "Ban-zutsu" (Numbered Cylinder), employed primarily by a class of old-earth peasant soldiers which surviving historical records refer to as Ashigaru. Technically classified as a "Snap-Matchlock," this weapon functions through the use of a burning matchcord which is held back under spring tension, snapping into the pan when the trigger is pulled. A distinctly eastern design, this style of grip allows for a slightly longer barrel without significantly increasing the overall length of the weapon.</description>
+    <defName>TGP_WheellockBlunderbuss</defName>
+    <label>Wheellock Blunderbuss</label>
+    <description>An ancient muzzle-loaded blunderbuss of a wheellock design. This piece forgoes typical round ball ammunition in favour of firing a dense pattern of smaller lead shot, making it deadly defensive option in close quarters combat.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/Matchlock-Ban-Zutsu-(256)</texPath>
+      <texPath>Things/Weapons/Wheellock-Blunderbuss-(256)</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+	<equippedAngleOffset>0</equippedAngleOffset>
     <soundInteract>Interact_Rifle</soundInteract>
     <weaponClasses>
-      <li>LongShots</li>
+      <li>ShortShots</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>11000</WorkToMake>
-      <Mass>4.50</Mass>
-      <Bulk>14.0</Bulk>
-      <ShotSpread>0.38</ShotSpread>
-      <SwayFactor>1.85</SwayFactor>
-      <SightsEfficiency>0.8</SightsEfficiency>
-      <RangedWeapon_Cooldown>1.03</RangedWeapon_Cooldown>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>8.0</Mass>
+      <Bulk>11.8</Bulk>
+      <ShotSpread>0.34</ShotSpread>
+      <SwayFactor>1.02</SwayFactor>
+      <SightsEfficiency>0.9</SightsEfficiency>
+      <RangedWeapon_Cooldown>1.09</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>65</Steel>
+      <Steel>110</Steel>
       <WoodLog>20</WoodLog>
     </costList>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
-        <recoilAmount>2.83</recoilAmount>
+        <recoilAmount>11</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_FastMusketBall</defaultProjectile>
-        <warmupTime>1.4</warmupTime>
-        <range>24</range>
-        <soundCast>Shot_BanZutsu</soundCast>
+        <defaultProjectile>Bullet_BlunderbussShot</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>20</range>
+        <soundCast>Shot_CE_Musket</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
@@ -57,17 +58,17 @@
       <li>SimpleGun</li>
       <li>NeolithicRangedHeavy</li>
       <li>NeolithicRangedChief</li>
-      <li>CE_AI_AR</li>
+      <li>CE_AI_BROOM</li>
     </weaponTags>
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>1</magazineSize>
-        <AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
+        <AmmoGenPerMagOverride>3</AmmoGenPerMagOverride>
         <reloadTime>8.0</reloadTime>
-        <ammoSet>AmmoSet_FastMusketBall</ammoSet>
+        <ammoSet>AmmoSet_BlunderbussShot</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
-        <aiAimMode>AimedShot</aiAimMode>
+        <aiAimMode>Snapshot</aiAimMode>
       </li>
     </comps>
     <recipeMaker>
@@ -75,7 +76,7 @@
         <li>FueledSmithy</li>
         <li>ElectricSmithy</li>
       </recipeUsers>
-      <researchPrerequisite>CE_Gunpowder</researchPrerequisite>
+      <researchPrerequisite>TGP_Wheellock</researchPrerequisite>
     </recipeMaker>
     <tools>
       <li Class="CombatExtended.ToolCE">
@@ -102,19 +103,18 @@
       <li Class="CombatExtended.ToolCE">
         <label>muzzle</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Poke</li>
         </capacities>
-        <power>7</power>
+        <power>8</power>
         <cooldownTime>1.55</cooldownTime>
-        <armorPenetrationSharp>1.3</armorPenetrationSharp>
         <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-        <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
       </li>
     </tools>
     <modExtensions>
       <li Class="CombatExtended.GunDrawExtension">
         <DrawSize>1.15,1.45</DrawSize>
-        <DrawOffset>0.10,0.0</DrawOffset>
+        <DrawOffset>0.15,0.0</DrawOffset>
       </li>
     </modExtensions>
   </ThingDef>

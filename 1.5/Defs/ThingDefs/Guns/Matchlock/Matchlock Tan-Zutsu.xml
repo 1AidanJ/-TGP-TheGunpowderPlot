@@ -6,9 +6,9 @@
 <Defs>
 
 
-<!-- ==================== TIER 3 ==================== -->
+<!-- ==================== TIER 1 ==================== -->
 
-<!-- ==================== Flintlock Pistol ==================== -->
+<!-- ==================== Matchlock Tan-Zutsu ==================== -->
 
   <ThingDef ParentName="BaseMakeableGun">
     <defName>TGP_MatchlockTanZutsu</defName>
@@ -101,7 +101,7 @@
     </tools>
     <modExtensions>
       <li Class="CombatExtended.GunDrawExtension">
-        <DrawSize>1.0,1.0</DrawSize>
+        <DrawSize>1.0,1.15</DrawSize>
         <DrawOffset>0.0,0.0</DrawOffset>
       </li>
     </modExtensions>

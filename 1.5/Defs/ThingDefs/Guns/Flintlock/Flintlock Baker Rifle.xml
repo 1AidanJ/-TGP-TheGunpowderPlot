@@ -43,7 +43,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_FastMusketBall</defaultProjectile>
         <warmupTime>1.4</warmupTime>
-        <range>48</range>
+        <range>42</range>
         <soundCast>Shot_Baker</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -113,7 +113,7 @@
     </tools>
     <modExtensions>
       <li Class="CombatExtended.GunDrawExtension">
-        <DrawSize>1.4,1.45</DrawSize>
+        <DrawSize>1.15,1.45</DrawSize>
         <DrawOffset>0.0,-0.1</DrawOffset>
       </li>
     </modExtensions>
